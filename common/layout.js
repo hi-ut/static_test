@@ -4,6 +4,7 @@ Vue.component('Layout', {
     return {
       langStr: this.lang === 'ja' ? '日本語' : 'English',
       baseUrl: process.env.BASE_URL,
+      dataUrl: process.env.DATA_URL,
       buttonActive: false,
       scroll: 0,
       dialog: false,
@@ -94,7 +95,7 @@ Vue.component('Layout', {
           <h1>
             <a :href="localePath({ name: 'index' })">
               <img
-                :src="baseUrl + '/img/icons/hilogo.png'"
+                :src="dataUrl + '/img/icons/hilogo.png'"
                 alt="東京大学史料編纂所 Historiographical Institute The University of Tokyo"
               />
             </a>
@@ -193,7 +194,7 @@ Vue.component('Layout', {
           <p class="logo">
             <a :href="localePath({ name: 'index' })"
               ><img
-                :src="baseUrl + '/assets/img/common/logo_foot.png'"
+                :src="dataUrl + '/assets/img/common/logo_foot.png'"
                 alt="東京大学史料編纂所 Historiographical Institute The University of Tokyo"
             /></a>
           </p>
